@@ -1,0 +1,55 @@
+{
+    "name": "PerfexCRM",
+    "id": "perfex",
+    "packaging_format": 1,
+    "description": {
+        "en": "Database management tool",
+        "fr": "Gestionnaire de base de données"
+    },
+
+    "version": "4.8.1~ynh3",
+    "url": "https://www.adminer.org/",
+    "upstream": {
+        "license": "Apache-2.0",
+        "website": "https://www.adminer.org/",
+        "demo": "https://demo.adminer.org/adminer.php?username=",
+        "code": "https://github.com/vrana/adminer/"
+    },
+    "license": "Apache-2.0",
+    "maintainer": {
+       "name": "Anmol Sharma",
+       "email": "anmol@datamol.org",
+       "url": "https://datamol.org"
+    },
+     "previous_maintainers": {
+       "name": "Fol",
+       "email": "fol@fol.tf",
+       "url": "https://github.com/jesuisfol/adminer_ynh"
+        },
+    "requirements": {
+        "yunohost": ">= 4.3.0"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx",
+        "php7.4-fpm"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "example": "/adminer",
+                "default": "/adminer"
+            },
+            {
+                "name": "admin",
+                "type": "user"
+            }
+        ]
+    }
+}
