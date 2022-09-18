@@ -7,8 +7,8 @@
         "fr": "Gestionnaire de base de données"
     },
 
-    "version": "4.8.1~ynh3",
-    "url": "https://www.adminer.org/",
+    "version": "2.9.4~ynh3",
+    "url": "https://www.perfexcrm.com/",
     "upstream": {
         "license": "Apache-2.0",
         "website": "https://www.adminer.org/",
@@ -17,15 +17,10 @@
     },
     "license": "Apache-2.0",
     "maintainer": {
-       "name": "Anmol Sharma",
-       "email": "anmol@datamol.org",
-       "url": "https://datamol.org"
+       "name": "Noureddine HADDAG",
+       "email": "contact@nhaddag.net",
+       "url": "https://nhaddag.net"
     },
-     "previous_maintainers": {
-       "name": "Fol",
-       "email": "fol@fol.tf",
-       "url": "https://github.com/jesuisfol/adminer_ynh"
-        },
     "requirements": {
         "yunohost": ">= 4.3.0"
     },
@@ -43,12 +38,21 @@
             {
                 "name": "path",
                 "type": "path",
-                "example": "/adminer",
-                "default": "/adminer"
+                "example": "/crm",
+                "default": "/crm"
             },
             {
                 "name": "admin",
                 "type": "user"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "default": true,
+                "help": {
+                    "en": "If enabled, PerfexCRM will be accessible by people who do not have an account. This can be changed later via the webadmin.",
+                    "fr": "Si cette case est cochée, PerfexCRM sera accessible aux personnes n’ayant pas de compte. Vous pourrez changer ceci plus tard via la webadmin."
+                }
             }
         ]
     }
